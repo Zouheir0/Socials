@@ -89,3 +89,176 @@ button:focus-visible,a:focus-visible{outline:3px solid var(--focus);outline-offs
  .social-channel__icon{width:40px;height:40px;flex-basis:40px}.social-channel__label{font-size:.86rem}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important}}
+
+
+/* Mobile priority pass: put the destinations first and remove artificial vertical spacing. */
+@media (max-width: 819px) {
+  .page-frame {
+    min-height: 100svh;
+  }
+
+  .lpHubShell {
+    flex: 0 0 auto;
+    padding: 10px 0 22px;
+  }
+
+  .lpHubGrid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .socialChannelPanel {
+    order: 1;
+    padding: 0;
+  }
+
+  .pascalLeftCard {
+    order: 2;
+    min-height: 0;
+    padding: 15px 16px;
+    box-shadow: none;
+  }
+
+  /* The seal is already in the header; hiding this duplicate gives links more room. */
+  .pascalLeftCard__logo {
+    display: none;
+  }
+
+  .pascalLeftCard__eyebrow {
+    margin-bottom: 5px;
+    font-size: .62rem;
+  }
+
+  .pascalLeftCard__title {
+    font-size: clamp(2.05rem, 8vw, 2.65rem);
+    line-height: 1;
+  }
+
+  .pascalLeftCard__grade {
+    margin-top: 4px;
+    font-size: .98rem;
+  }
+
+  .pascalLeftCard__description {
+    max-width: none;
+    margin-top: 8px;
+    font-size: .86rem;
+    line-height: 1.45;
+  }
+
+  .pascalLeftCard__share {
+    margin-top: 11px;
+    padding-top: 10px;
+    gap: 8px 10px;
+  }
+
+  .copyShareUrl {
+    width: auto;
+    min-height: 46px;
+  }
+
+  .copyShareUrl__status {
+    flex: 1 1 110px;
+    font-size: .78rem;
+  }
+
+  .pascalLeftCard__note,
+  .socialChannelPanel__footnote {
+    display: none;
+  }
+
+  .socialChannelPanel__heading {
+    margin-bottom: 10px;
+  }
+
+  .socialChannelPanel__eyebrow {
+    margin-bottom: 4px;
+    font-size: .61rem;
+  }
+
+  .socialChannelPanel__heading h2 {
+    font-size: 1.42rem;
+    line-height: 1.12;
+  }
+
+  .socialChannelPanel__heading > p:last-child {
+    margin-top: 5px;
+    font-size: .8rem;
+  }
+
+  .socialChannelList {
+    gap: 8px;
+  }
+
+  .social-channel {
+    min-height: 66px;
+    gap: 11px;
+    padding: 10px 12px;
+  }
+
+  .social-channel__icon {
+    width: 40px;
+    height: 40px;
+    flex-basis: 40px;
+  }
+
+  .social-channel__icon svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .social-channel__copy {
+    gap: 3px;
+  }
+
+  .social-channel__label {
+    font-size: .89rem;
+    line-height: 1.25;
+  }
+
+  .social-channel__handle {
+    font-size: .78rem;
+    line-height: 1.25;
+  }
+
+  .social-channel__arrow {
+    width: 18px;
+    height: 18px;
+    flex-basis: 18px;
+  }
+
+  .lp-footer__inner {
+    min-height: 50px;
+  }
+}
+
+@media (max-width: 359px) {
+  .lpHubShell {
+    width: min(100% - 24px, 1120px);
+    padding-top: 8px;
+  }
+
+  .lpHubGrid {
+    gap: 12px;
+  }
+
+  .social-channel {
+    min-height: 64px;
+    gap: 9px;
+    padding: 9px 10px;
+  }
+
+  .social-channel__icon {
+    width: 38px;
+    height: 38px;
+    flex-basis: 38px;
+  }
+
+  .social-channel__label {
+    font-size: .85rem;
+  }
+
+  .pascalLeftCard {
+    padding: 13px 14px;
+  }
+}
